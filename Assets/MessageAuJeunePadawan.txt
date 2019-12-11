@@ -1,0 +1,27 @@
+Jeune Padawan,
+te voici sur le chemin de la umière! et de git. N'oublie pas mes enseignements!
+
+cd pour voyager entre les mondes
+ls pour voir l'invisible!
+git pull pour recevoir les message de l'au delà!
+
+je vais à présent t'enseigner deux nouvelles techniques de la force.
+
+git status pour voir tout ce que tu as fais et que le courant de la force ne sait pas encore
+git add pathD'unDocument pour adicioner un fait
+git add . pour adicioner tous tes faits
+git commit -m " Voici les choses que j'ai faite " pour organiser le message à envoyer dans le courant de la force
+git push pour envoyer ton message dans le courant de la force!!!!
+
+Récapitulon:
+
+git status pour voir ce que je peux mettre dans mon paquet
+git add j'adicione mes objet dans mon paquet ( suivi de . pour tout adicioner )
+git commit -m " ... " je fait mon paquet
+git push je poste mon paquet
+
+A toi de jouer jeune padawan! Dis moi si tu a compris et envoi moi ta réponse via le courant de la FOOORCE
+
+Réponse du jeune padawan:
+
+>>ICI<<
