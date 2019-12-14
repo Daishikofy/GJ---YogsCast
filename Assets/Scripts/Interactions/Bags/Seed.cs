@@ -4,6 +4,8 @@ public class Seed : Selectable
 {
     public string name;
     public Sprite selectedSprite;
+    [SerializeField]
+    bool groundFriendly = false;
 
     public Seed(string name, Sprite sprite)
     {
@@ -29,5 +31,10 @@ public class Seed : Selectable
     public Sprite getSprite()
     {
         return selectedSprite;
+    }
+
+    public bool isGroundFriendly()
+    {
+        return groundFriendly;
     }
 }

@@ -20,7 +20,8 @@ public class Player : MonoBehaviour
     private PlayerInput playerInput;
     private Rigidbody2D rigidbody2D;
     private Vector2 playerMovement;
-    private Vector2 playerDirection;
+    [HideInInspector]
+    public Vector2 playerDirection;
 
     public Selectable selectedObject;
     [SerializeField]
@@ -133,7 +134,15 @@ public class Player : MonoBehaviour
         Debug.Log("fraction: " + hit.fraction);
         Debug.DrawRay(transform.position, playerDirection, Color.red, 1);
 
-        if (hit.collider == null) return;
+        if (hit.collider == null)
+        {
+            if (selectedObject != null && selectedObject.isGroundFriendly())
+            {
+                selectedObject.deSelected();
+                setSelectedObject(null);
+            }
+            return;
+        }
         Interactable interactable = hit.collider.gameObject.GetComponent<Interactable>();
         //Debug.Log(hit.collider.gameObject.name);
 

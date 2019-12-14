@@ -5,4 +5,5 @@ public interface Selectable
     void deSelected();
     string getType();
     Sprite getSprite();
+    bool isGroundFriendly();
 }
