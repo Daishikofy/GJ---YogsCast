@@ -37,4 +37,9 @@ public class Insects : Selectable
     {
         return groundFriendly;
     }
+
+    public bool isType(string type)
+    {
+        return (this.GetType().Name == type);
+    }
 }

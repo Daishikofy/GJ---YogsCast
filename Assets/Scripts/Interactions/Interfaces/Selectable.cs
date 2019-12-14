@@ -6,4 +6,5 @@ public interface Selectable
     string getType();
     Sprite getSprite();
     bool isGroundFriendly();
+    bool isType(string type);
 }

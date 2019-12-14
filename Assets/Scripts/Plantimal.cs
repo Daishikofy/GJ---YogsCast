@@ -17,7 +17,7 @@ public class Plantimal : MonoBehaviour, Interactable, Selectable
 
     Player player;
 
-    public Plantimal(int[] attribute)
+    public void instance(int[] attribute)
     {
         this.attribute = attribute;
     }
@@ -30,6 +30,7 @@ public class Plantimal : MonoBehaviour, Interactable, Selectable
     public void OnInteraction(Player player)
     {
         Debug.Log("I am " + name);
+        if (player.selectedObject != null) return;
         player.setSelectedObject(this);
         this.player = player;
         selected();
@@ -71,5 +72,16 @@ public class Plantimal : MonoBehaviour, Interactable, Selectable
     public bool isGroundFriendly()
     {
         return groundFriendly;
+    }
+
+    public bool isType(string type)
+    {
+        return (this.GetType().Name == type);
+    }
+
+    public int[] sendPlantimal()
+    {
+        Destroy(this.gameObject, 0.1f);
+        return attribute;
     }
 }

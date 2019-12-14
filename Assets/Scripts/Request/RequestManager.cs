@@ -4,10 +4,26 @@ using UnityEngine;
 
 public class RequestManager : MonoBehaviour
 {
+    private static RequestManager instance;
+
     private int requestsNumber;
     private Queue<Request> requests;
 
     private Request testRequest;
+
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
+    }
+    public static RequestManager Instance { get { return instance; } }
+
     // Start is called before the first frame update
     public void Start()
     {
@@ -26,21 +42,20 @@ public class RequestManager : MonoBehaviour
         var request = new Request(id, requestLetter, attributes);
         requests.Enqueue(request);
         requestsNumber += 1;
-        validateRequest(testRequest);
     }
 
-    public int validateRequest(/*Plantimal*/Request plantimal)//BUG ICI SI TU NE CHANGE PAS REQUEST ET PLANTIMAL
+    public bool validateRequest(Plantimal plantimal)
     {
         if (requestsNumber == 0)
         {
             Debug.LogWarning("Il n'y a pas de request à résoudre");
-            return 0;
+            return false;
         }
         var lastRequest = requests.Dequeue();
         requestsNumber -= 1;
 
         int[] requestAttributes = lastRequest.getAttributes();
-        int[] plantimalAttributes = plantimal.getAttributes();
+        int[] plantimalAttributes = plantimal.sendPlantimal();
 
         int success = lastRequest.getHapiness();
         float loss = success / requestAttributes.Length; 
@@ -58,6 +73,7 @@ public class RequestManager : MonoBehaviour
         Debug.Log("Request: " + att1 + " - Plantimal: "+ att2);
         Debug.Log("Seccess: " + success);
 
-        return success;
+        GameManager.Instance.addHappinessPoints(success);
+        return true;
     }
 }
