@@ -1,34 +1,31 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SeedBag : MonoBehaviour, Interactable
 {
     [SerializeField]
-    private string seedType;
+    private string objectType;
     [SerializeField]
-    private Sprite seedSprite;
+    private Sprite objectSprite;
 
     public string getType()
     {
-        return this.seedType;
+        return this.objectType;
     }
 
     public void OnInteraction(Player player)
     {
-        Debug.Log("Bag of seed: This is a bag of " + seedType + " seeds.");
+        Debug.Log("Bag : This is a bag of " + objectType + " .");
         if (player.selectedObject == null)
         {
-            var seed = new Seed(seedType, seedSprite);
+            var seed = new Seed(objectType, objectSprite);
             seed.selected();
             player.setSelectedObject(seed);
         }
-        else if (player.selectedObject.getType() == this.seedType)
+        else if (player.selectedObject.getType() == this.objectType)
         {
             player.selectedObject.deSelected();
             player.setSelectedObject(null);
         }
     }
-
 
 }
