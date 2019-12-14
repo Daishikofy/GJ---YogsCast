@@ -13,24 +13,32 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float dashCoolDown;
 
-    private PlayerInput playerInput;
-    private Rigidbody2D rigidbody2D;
-    private Vector2 playerMovement;
-
     private IEnumerator dashCorroutine;
     private bool canDash;
     private bool dashing;
+
+    private PlayerInput playerInput;
+    private Rigidbody2D rigidbody2D;
+    private Vector2 playerMovement;
+    private Vector2 playerDirection;
+
+    public Selectable selectedObject;
+    [SerializeField]
+    private SpriteRenderer selectedObjectSprite;
 
     // Use this for initialization
     void Start()
     {
         playerInput = new PlayerInput();
         playerInput.Enable();
-        playerInput.Player.Move.performed += context => move(context.ReadValue<Vector2>());
+        playerInput.Player.X.performed += context => horizontal(context.ReadValue<float>());
+        playerInput.Player.Y.performed += context => vertical(context.ReadValue<float>());
+        playerInput.Player.Interact.performed += _ => interacting();
         rigidbody2D = GetComponent<Rigidbody2D>();
 
         canDash = true;
         dashing = false;
+        selectedObjectSprite.sprite = null;
     }
 
     // Update is called once per frame
@@ -42,8 +50,9 @@ public class Player : MonoBehaviour
          * The speed is only applied after going throught the dash test.
          */
 
+        //playerMovement = Vector2.zero;
         //We use corroutine for the dash so the update function stays clean
-        if (Input.GetKeyDown(KeyCode.Space) && canDash)
+        if (/*Input.GetKeyDown(KeyCode.Space) && canDash*/ 1 == 0)
         {
             canDash = false;
             dashing = true;
@@ -54,6 +63,7 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //Debug.Log("rigidbody2D.position" + rigidbody2D.position + " playerMovement " + playerMovement);
         rigidbody2D.MovePosition(rigidbody2D.position + playerMovement * Time.deltaTime);
     }
 
@@ -87,10 +97,66 @@ public class Player : MonoBehaviour
         canDash = true;
     }
 
-    private void move(Vector2 input)
+    private void horizontal(float value)
     {
-        if (input.y != 0 && input.x != 0)
-            input.y = 0;
-        playerMovement = input * speed;
+ //       Debug.Log("horizontal:" + value);
+        if (value == 0 && playerMovement.y != 0)
+            return;
+        else
+        {
+            this.playerMovement.x = (int)value;
+            this.playerMovement.y = 0;
+        }
+        if (playerMovement.x != 0 || playerMovement.y != 0)
+            playerDirection = playerMovement;
+        playerMovement *= speed;
     }
+
+    private void vertical(float value)
+    {
+//        Debug.Log("vertical: " +value);
+        if (value == 0 && playerMovement.x != 0)
+            return;
+        else
+        {
+            this.playerMovement.x = 0;
+            this.playerMovement.y = (int)value;
+        }
+        if(playerMovement.x != 0 || playerMovement.y != 0)
+            playerDirection = playerMovement;
+        playerMovement *= speed;
+    }
+
+    private void interacting()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, playerDirection, 0.1f);
+        Debug.Log("fraction: " + hit.fraction);
+        Debug.DrawRay(transform.position, playerDirection, Color.red, 1);
+
+        if (hit.collider == null) return;
+        Interactable interactable = hit.collider.gameObject.GetComponent<Interactable>();
+        //Debug.Log(hit.collider.gameObject.name);
+
+        if (interactable == null) return;
+        interactable.OnInteraction(this);
+    }
+
+    public void setSelectedObject(Selectable obj)
+    {
+        if (obj == null)
+        {
+            GetComponent<SpriteRenderer>().color = Color.white;
+            selectedObjectSprite.sprite = null;
+            Debug.Log("Player: You put down the " + selectedObject.getType());
+        }
+        else
+        {
+            GetComponent<SpriteRenderer>().color = Color.green;
+            selectedObjectSprite.sprite = obj.getSprite();
+            Debug.Log("Player: You pick the " + obj.getType());
+        }
+
+        selectedObject = obj;
+    }
+
 }
