@@ -129,7 +129,7 @@ public class Player : MonoBehaviour
 
     private void interacting()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, playerDirection, 0.1f);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, playerDirection, 0.5f);
         Debug.Log("fraction: " + hit.fraction);
         Debug.DrawRay(transform.position, playerDirection, Color.red, 1);
 
