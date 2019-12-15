@@ -5,8 +5,7 @@ using System.Linq;
 public class SwapSprites : MonoBehaviour
 {
     // The name of the sprite sheet to use
-    [SerializeField]
-    private string SpriteSheetName;
+    public string SpriteSheetName;
 
     // The name of the currently loaded sprite sheet
     private string LoadedSpriteSheetName;

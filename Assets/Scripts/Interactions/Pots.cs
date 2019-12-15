@@ -36,7 +36,7 @@ public class Pots : MonoBehaviour, Interactable
             }
             else if (selectedObject.isType(typeof(WaterCan).Name) && !isWatered)
             {
-                Debug.Log("Pot: I like water");//Wtering
+                Debug.Log("Pot: I like water");//Watering
                 WaterCan waterCan = (WaterCan)selectedObject;
                 waterCan.use(this);       
             }
@@ -44,6 +44,8 @@ public class Pots : MonoBehaviour, Interactable
         else if (selectedObject == null && isReadyForHarvest)
         {
             Debug.Log("Pot: It is harvest time!");//Harvesting
+            harvest(player);
+
             //If the plant is ready, harvest
         }
     }
@@ -90,10 +92,12 @@ public class Pots : MonoBehaviour, Interactable
         }
     }
 
-    private void Harvest()
+    private void harvest(Player player)
     {
         //Pass the animal and the biome and get a prefab back
+        var plantanimal = PlantimalFactory.Instance.instanciatePlantimal(plant.getAnimal());
         //Instanciate the prefab and desable it
+        plantanimal.GetComponent<Plantimal>().OnInteraction(player);
         //Put the animal in the hands of the player
         resetPot();
     }
