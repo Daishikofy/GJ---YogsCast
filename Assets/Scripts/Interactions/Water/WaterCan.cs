@@ -2,31 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Plantimal : MonoBehaviour, Interactable, Selectable
+public class WaterCan : MonoBehaviour, Selectable, Interactable
 {
     [SerializeField]
-    int[] attribute = new int[3];
-    [SerializeField]
     string name;
+    [SerializeField]
+    int maxCapacity;
     [SerializeField]
     Sprite selectedSprite;
     [SerializeField]
     bool groundFriendly = true;
 
     bool isBeingHold = false;
-
+    int currentWater;
     Player player;
 
-    public void instance(int[] attribute)
-    {
-        this.attribute = attribute;
-    }
+    EventInt updateWater;
 
-    int[] getAttribute()
+    private void Start()
     {
-        return attribute;
+        setWater(maxCapacity);
     }
-
     public void OnInteraction(Player player)
     {
         Debug.Log("I am " + name);
@@ -38,10 +34,9 @@ public class Plantimal : MonoBehaviour, Interactable, Selectable
 
     public void selected()
     {
-        //Desable the game object
         GetComponent<SpriteRenderer>().enabled = false;
         GetComponent<Collider2D>().enabled = false;
-        
+
         Debug.Log(name + ": You are holding me!");
         isBeingHold = true;
     }
@@ -58,15 +53,14 @@ public class Plantimal : MonoBehaviour, Interactable, Selectable
         player = null;
     }
 
-    public string getType()
-    {
-        return name;
-
-    }
-
     public Sprite getSprite()
     {
         return selectedSprite;
+    }
+
+    public string getName()
+    {
+        return name;
     }
 
     public bool isGroundFriendly()
@@ -79,9 +73,25 @@ public class Plantimal : MonoBehaviour, Interactable, Selectable
         return (this.GetType().Name == type);
     }
 
-    public int[] sendPlantimal()
+    public void use(Pots pot)
     {
-        Destroy(this.gameObject, 0.1f);
-        return attribute;
+        if (currentWater <= 0)
+        {
+            Debug.Log("Water Can : There is no more water!");
+            return;
+        }
+        currentWater -= 1;
+        pot.setWater(true);
+    }
+
+    public void fill()
+    {
+        Debug.Log("Water Can : I am full!!");
+        setWater(maxCapacity);
+    }
+
+    private void setWater(int value)
+    {
+        currentWater = value;
     }
 }

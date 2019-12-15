@@ -130,9 +130,10 @@ public class Player : MonoBehaviour
 
     private void interacting()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, playerDirection, 0.5f);
+        Vector3 startPoint = transform.position + Vector3.up * 0.1f;
+        RaycastHit2D hit = Physics2D.Raycast(startPoint, playerDirection, 0.5f);
         Debug.Log("fraction: " + hit.fraction);
-        Debug.DrawRay(transform.position, playerDirection, Color.red, 1);
+        Debug.DrawRay(startPoint, playerDirection, Color.red, 1);
 
         if (hit.collider == null)
         {
@@ -156,13 +157,13 @@ public class Player : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().color = Color.white;
             selectedObjectSprite.sprite = null;
-            Debug.Log("Player: You put down the " + selectedObject.getType());
+            Debug.Log("Player: You put down the " + selectedObject.getName());
         }
         else
         {
             GetComponent<SpriteRenderer>().color = Color.green;
             selectedObjectSprite.sprite = obj.getSprite();
-            Debug.Log("Player: You pick the " + obj.getType());
+            Debug.Log("Player: You pick the " + obj.getName());
         }
 
         selectedObject = obj;

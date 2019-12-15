@@ -3,7 +3,7 @@ public interface Selectable
 {
     void selected();
     void deSelected();
-    string getType();
+    string getName();
     Sprite getSprite();
     bool isGroundFriendly();
     bool isType(string type);

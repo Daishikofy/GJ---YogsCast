@@ -2,13 +2,18 @@
 
 public class Seed : Selectable
 {
-    public string name;
+    public string name = "( Seed : I am deprecated :D )";
     public Sprite selectedSprite;
+    private Attributes.Animal seedType;
     [SerializeField]
     bool groundFriendly = false;
 
-    public Seed(string name, Sprite sprite)
+    [SerializeField]
+    GameObject plantPrefab;
+
+    public Seed(Attributes.Animal type, string name,  Sprite sprite)
     {
+        this.seedType = type;
         this.name = name;
         this.selectedSprite = sprite;
     }
@@ -23,7 +28,7 @@ public class Seed : Selectable
         Debug.Log("You put the " + name + " seed back in the pot.");
     }
 
-    public string getType()
+    public string getName()
     {
         return name;
     }
@@ -40,5 +45,10 @@ public class Seed : Selectable
     public bool isType(string type)
     {
         return (this.GetType().Name == type);
+    }
+
+    public GameObject getPlantPrefab()
+    {
+        return plantPrefab;
     }
 }
