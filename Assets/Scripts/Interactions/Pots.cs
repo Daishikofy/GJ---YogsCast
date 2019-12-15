@@ -14,25 +14,27 @@ public class Pots : MonoBehaviour, Interactable
     float timeBeforeHarvest;
     float timeSincePlanted;
 
-    bool isOccupied;
-    bool isWatered;
-    bool isReadyForHarvest;
+    bool isOccupied = false;
+    bool isWatered = false;
+    bool isReadyForHarvest = false;
     Plant plant;
-    //DEBUG : Implémenter l'objet plante
+
     public void OnInteraction(Player player)
     {
         var selectedObject = player.selectedObject;
         if (selectedObject != null)
         {
+            Debug.Log("Pot : You are holding something");
             if (selectedObject.isType(typeof(Seed).Name))//Planting
             {
                 player.selectedObject.deSelected();
                 player.setSelectedObject(null);
                 Seed seed = (Seed)selectedObject;
                 plant = Instantiate(seed.getPlantPrefab(), this.transform.position + Vector3.up * 0.5f, Quaternion.identity, this.transform).GetComponent<Plant>();
+                putPlantInPot();
                 Debug.Log("Pot: You just planted a " + selectedObject.getName());
             }
-            if (selectedObject.isType(typeof(WaterCan).Name) && !isWatered)
+            else if (selectedObject.isType(typeof(WaterCan).Name) && !isWatered)
             {
                 Debug.Log("Pot: I like water");//Wtering
                 WaterCan waterCan = (WaterCan)selectedObject;
@@ -51,10 +53,19 @@ public class Pots : MonoBehaviour, Interactable
         if (!isOccupied || isReadyForHarvest) return;
         if (timeSincePlanted >= timeBeforeHarvest)
         {
-            isReadyForHarvest = true;
+            setReadyForHarvest (true);
             return;
         }
-        timeSincePlanted += Time.deltaTime * waterGrowthBoost;
+        if (isWatered)
+            timeSincePlanted += Time.deltaTime * waterGrowthBoost;
+        else
+            timeSincePlanted += Time.deltaTime;
+    }
+
+    private void putPlantInPot()
+    {
+        timeBeforeHarvest = plant.getTime();
+        isOccupied = true;
     }
 
     private void resetPot()
@@ -68,6 +79,7 @@ public class Pots : MonoBehaviour, Interactable
     {
         if (value)
         {
+            Debug.Log("Pot : Ready for harvest!!");
             isReadyForHarvest = true;
             plant.isReadyHarvest();
         }
@@ -83,6 +95,7 @@ public class Pots : MonoBehaviour, Interactable
         //Pass the animal and the biome and get a prefab back
         //Instanciate the prefab and desable it
         //Put the animal in the hands of the player
+        resetPot();
     }
 
     public void setWater(bool value)

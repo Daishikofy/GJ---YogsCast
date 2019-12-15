@@ -4,16 +4,14 @@ public class Seed : Selectable
 {
     public string name = "( Seed : I am deprecated :D )";
     public Sprite selectedSprite;
-    private Attributes.Animal seedType;
     [SerializeField]
     bool groundFriendly = false;
 
-    [SerializeField]
     GameObject plantPrefab;
 
-    public Seed(Attributes.Animal type, string name,  Sprite sprite)
+    public Seed(GameObject plantPrefab, string name,  Sprite sprite)
     {
-        this.seedType = type;
+        this.plantPrefab = plantPrefab;
         this.name = name;
         this.selectedSprite = sprite;
     }

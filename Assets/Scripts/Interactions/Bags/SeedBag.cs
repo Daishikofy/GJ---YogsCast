@@ -8,6 +8,8 @@ public class SeedBag : MonoBehaviour, Interactable
     private Attributes.Animal seedType;
     [SerializeField]
     private Sprite objectSprite;
+    [SerializeField]
+    private GameObject plantPrefab;
 
     public string getType()
     {
@@ -19,7 +21,7 @@ public class SeedBag : MonoBehaviour, Interactable
         Debug.Log("Bag : This is a bag of " + objectType + " .");
         if (player.selectedObject == null)
         {
-            var seed = new Seed(seedType, objectType, objectSprite);
+            var seed = new Seed(plantPrefab, objectType, objectSprite);
             seed.selected();
             player.setSelectedObject(seed);
         }

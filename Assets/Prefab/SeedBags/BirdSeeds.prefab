@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 8690741078755462755, guid: ce224434f93aab347ae090c09eab11b5,
         type: 3}
       propertyPath: seedType
-      value: Bird
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8690741078755462755, guid: ce224434f93aab347ae090c09eab11b5,
         type: 3}
@@ -22,6 +22,12 @@ PrefabInstance:
       propertyPath: objectType
       value: birdSeeds
       objectReference: {fileID: 0}
+    - target: {fileID: 8690741078755462755, guid: ce224434f93aab347ae090c09eab11b5,
+        type: 3}
+      propertyPath: plantPrefab
+      value: 
+      objectReference: {fileID: 1157059968366063693, guid: 409638982ed99d648a919925fccff764,
+        type: 3}
     - target: {fileID: 8690741078755462756, guid: ce224434f93aab347ae090c09eab11b5,
         type: 3}
       propertyPath: m_LocalPosition.x
