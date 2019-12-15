@@ -6,6 +6,8 @@ public class InsectsBag : MonoBehaviour, Interactable
     private string objectType;
     [SerializeField]
     private Sprite objectSprite;
+    [SerializeField]
+    private Food foodType;
 
     public string getType()
     {

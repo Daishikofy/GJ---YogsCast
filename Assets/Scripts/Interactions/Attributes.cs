@@ -14,7 +14,7 @@ public enum Animal
 public enum Biome
 {
     Grass,
-    Sand,
+    Desert,
     Autumn
 };
 

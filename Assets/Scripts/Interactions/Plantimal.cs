@@ -52,7 +52,7 @@ public class Plantimal : MonoBehaviour, Interactable, Selectable
         var selectedObject = player.selectedObject;
         if (selectedObject != null)
         {
-            if (selectedObject.isType(typeof(Insects).Name))
+            if (selectedObject.isType(typeof(Insects).Name))//Food
             {
                 if (isFed || isGrown)
                 {
@@ -61,7 +61,8 @@ public class Plantimal : MonoBehaviour, Interactable, Selectable
                 }
                 var insect = (Insects)selectedObject;
                 feed(insect.getFood());
-                selectedObject.deSelected();
+                player.selectedObject.deSelected();
+                player.setSelectedObject(null);
             }
                 return;
         }
@@ -159,6 +160,10 @@ public class Plantimal : MonoBehaviour, Interactable, Selectable
     {
         isGrown = true;
         Debug.Log(myName + " : I am a grown up now!");
+        if (!isColored)
+            attribute.food = Food.Normal;
+        Debug.Log(myName + " : " + attribute.ToString());
+        GetComponent<SwapSprites>().SpriteSheetName = attribute.ToString();
     }
 
     private void changeDirection(Vector2 playerDirection)
