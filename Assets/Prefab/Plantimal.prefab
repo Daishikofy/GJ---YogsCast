@@ -52,7 +52,7 @@ MonoBehaviour:
     biome: 0
     food: 0
   myName: "Jos\xE9"
-  timeBeforeHungry: 3
+  timeBeforeHungry: 30
   feedTimesToGrow: 3
   selectedSprite: {fileID: -141141701401783301, guid: aed9935b781c3b34bb6b6c86e7e928e0,
     type: 3}
@@ -148,7 +148,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5464154460149260961}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0

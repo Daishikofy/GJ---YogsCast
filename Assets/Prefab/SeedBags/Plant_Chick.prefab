@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94d10f37a6fa1ef42a043d5b18960bbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBeforeHarvest: 3
+  timeBeforeHarvest: 100
   readyForHarvest: {fileID: -141141701401783301, guid: aed9935b781c3b34bb6b6c86e7e928e0,
     type: 3}
   animal: 0

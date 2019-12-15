@@ -117,7 +117,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-            GetComponent<SpriteRenderer>().color = Color.green;
+            //GetComponent<SpriteRenderer>().color = Color.green;
             selectedObjectSprite.sprite = obj.getSprite();
             Debug.Log("Player: You pick the " + obj.getName());
         }

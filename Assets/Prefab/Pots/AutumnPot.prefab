@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 494278093057583682, guid: 82bf91ba03df14749a1e4a30828178ae,
         type: 3}
       propertyPath: m_Name
-      value: Pot
+      value: AutumnPot
       objectReference: {fileID: 0}
     - target: {fileID: 3373946094412105409, guid: 82bf91ba03df14749a1e4a30828178ae,
         type: 3}
@@ -66,6 +66,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3381317217086178184, guid: 82bf91ba03df14749a1e4a30828178ae,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.198
+      objectReference: {fileID: 0}
+    - target: {fileID: 3381317217086178184, guid: 82bf91ba03df14749a1e4a30828178ae,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.043
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82bf91ba03df14749a1e4a30828178ae, type: 3}
