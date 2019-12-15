@@ -13,8 +13,8 @@ public class Plantimal : MonoBehaviour, Interactable, Selectable
     float timeBeforeHungry = 10;
     [SerializeField]
     int feedTimesToGrow = 3;
-    [SerializeField]
-    Sprite selectedSprite;
+
+    public Sprite selectedSprite;
     [SerializeField]
     bool groundFriendly = true;
 
@@ -29,9 +29,10 @@ public class Plantimal : MonoBehaviour, Interactable, Selectable
     Player player;
     Vector2 currentDirection;
 
-    public void instanciate(Attributes attributes)
+    public void instanciate(Attributes attributes, Sprite sprite)
     {
         this.attribute = attributes;
+        this.selectedSprite = sprite;
     }
 
     Attributes getAttribute()
@@ -43,6 +44,8 @@ public class Plantimal : MonoBehaviour, Interactable, Selectable
     {
         Debug.Log("I am " + name);
         Debug.Log("Attributes: " + attribute.ToString());
+        if (selectedSprite == null)
+            setFirstSprite();
         var selectedObject = player.selectedObject;
         if (selectedObject != null)
         {
@@ -159,5 +162,11 @@ public class Plantimal : MonoBehaviour, Interactable, Selectable
         currentDirection = playerDirection;
         GetComponent<Animator>().SetFloat("X",currentDirection.x);
         GetComponent<Animator>().SetFloat("Y", currentDirection.y);
+    }
+
+    private void setFirstSprite()
+    {
+        SwapSprites swap = GetComponent<SwapSprites>();
+        selectedSprite = swap.getFirstSprite();
     }
 }

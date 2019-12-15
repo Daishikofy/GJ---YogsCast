@@ -51,4 +51,9 @@ public class SwapSprites : MonoBehaviour
         // Remember the name of the sprite sheet in case it is changed later
         this.LoadedSpriteSheetName = this.SpriteSheetName;
     }
+
+    public Sprite getFirstSprite()
+    {
+        return spriteSheet["PlatimalFront_0"];
+    }
 }

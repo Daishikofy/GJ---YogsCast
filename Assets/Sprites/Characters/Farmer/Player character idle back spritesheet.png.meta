@@ -104,18 +104,18 @@ TextureImporter:
       name: Player character idle back spritesheet_0
       rect:
         serializedVersion: 2
-        x: 8
+        x: 0
         y: 0
-        width: 16
+        width: 32
         height: 53
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df259c777faeec947bb0559e291a484e
+      spriteID: cd24c4df1f5b0d64d85c55064a302889
       internalID: 3335872653436791979
       vertices: []
       indices: 
@@ -125,18 +125,18 @@ TextureImporter:
       name: Player character idle back spritesheet_1
       rect:
         serializedVersion: 2
-        x: 40
+        x: 32
         y: 0
-        width: 16
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 32
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64aea3adf93804d42a2cefcd9a952dab
+      spriteID: f2f394245f25b6044ad423b430d62e97
       internalID: -7346070292562861869
       vertices: []
       indices: 
@@ -146,18 +146,18 @@ TextureImporter:
       name: Player character idle back spritesheet_2
       rect:
         serializedVersion: 2
-        x: 72
+        x: 64
         y: 0
-        width: 16
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 32
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b132a6b150c29ca4982d50fd63c11e7e
+      spriteID: b036bfbc62ab6ef4993d044026395a8d
       internalID: -2288391853903085992
       vertices: []
       indices: 
@@ -167,18 +167,18 @@ TextureImporter:
       name: Player character idle back spritesheet_3
       rect:
         serializedVersion: 2
-        x: 104
+        x: 96
         y: 0
-        width: 16
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 32
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94ae09f71ee1d7f4caf5c5a7efe05a8f
+      spriteID: 0159b57cdf0e779469126387d4ce73ce
       internalID: -4216458552388104245
       vertices: []
       indices: 
@@ -188,18 +188,18 @@ TextureImporter:
       name: Player character idle back spritesheet_4
       rect:
         serializedVersion: 2
-        x: 136
+        x: 128
         y: 0
-        width: 16
+        width: 32
         height: 53
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71df71c5535e2d24db88d4581827998a
+      spriteID: 47c271134d13d8348bf6a08ccc7f2c57
       internalID: -1119957021480379393
       vertices: []
       indices: 

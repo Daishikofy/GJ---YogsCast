@@ -6,22 +6,14 @@ public class Player : MonoBehaviour
 {
     [SerializeField]
     private float speed;
-    [SerializeField]
-    private float dashFactor;
-    [SerializeField]
-    private float dashDuration;
-    [SerializeField]
-    private float dashCoolDown;
-
-    private IEnumerator dashCorroutine;
-    private bool canDash;
-    private bool dashing;
 
     private PlayerInput playerInput;
     private Rigidbody2D rigidbody2D;
     private Vector2 playerMovement;
     [HideInInspector]
     public Vector2 playerDirection;
+    bool isMoving = false;
+    Animator animator;
 
     public Selectable selectedObject;
     [SerializeField]
@@ -30,6 +22,7 @@ public class Player : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        animator = GetComponent<Animator>();
         playerInput = new PlayerInput();
         playerInput.Enable();
         playerInput.Player.X.performed += context => horizontal(context.ReadValue<float>());
@@ -37,65 +30,24 @@ public class Player : MonoBehaviour
         playerInput.Player.Interact.performed += _ => interacting();
         rigidbody2D = GetComponent<Rigidbody2D>();
 
-        canDash = true;
-        dashing = false;
         selectedObjectSprite.sprite = null;
+
+        playerDirection = Vector2.down;
+        animator.SetFloat("X", playerDirection.x);
+        animator.SetFloat("Y", playerDirection.y);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        /*
-         * PlayerInput receives values between -1 and 1 and is then normalized
-         * PlayerMovement representes those values multiplied by the player's speed
-         * The speed is only applied after going throught the dash test.
-         */
-
-        //playerMovement = Vector2.zero;
-        //We use corroutine for the dash so the update function stays clean
-        if (/*Input.GetKeyDown(KeyCode.Space) && canDash*/ 1 == 0)
-        {
-            canDash = false;
-            dashing = true;
-            dashCorroutine = Dash();
-            StartCoroutine(dashCorroutine);
-        }
+        if (playerMovement == Vector2.zero)
+            animator.SetBool("isMoving", false);
+        else
+            animator.SetBool("isMoving", true);
     }
 
     private void FixedUpdate()
-    {
-        //Debug.Log("rigidbody2D.position" + rigidbody2D.position + " playerMovement " + playerMovement);
+    {       
         rigidbody2D.MovePosition(rigidbody2D.position + playerMovement * Time.deltaTime);
-    }
-
-    IEnumerator Dash()
-    {
-        /*
-         * The speed is multiply by the dash 
-         * factor during the dashDuration
-         */
-        speed = speed * dashFactor;
-        float normalizedTime = 0;
-        while (normalizedTime <= 1f)
-        {
-            normalizedTime += 1 / dashDuration;
-            yield return null;
-        }
-
-        // It is then set to the original speed
-
-        speed = speed / dashFactor;
-        dashing = false;
-
-        // then the coolDown happens, the player can only dash again after it.
-        normalizedTime = 0;
-        while (normalizedTime <= 1f)
-        {
-            normalizedTime += 1 / dashCoolDown;
-            yield return null;
-        }
-
-        canDash = true;
     }
 
     private void horizontal(float value)
@@ -111,6 +63,8 @@ public class Player : MonoBehaviour
         if (playerMovement.x != 0 || playerMovement.y != 0)
             playerDirection = playerMovement;
         playerMovement *= speed;
+        animator.SetFloat("X", playerDirection.x);
+        animator.SetFloat("Y", playerDirection.y);
     }
 
     private void vertical(float value)
@@ -126,6 +80,8 @@ public class Player : MonoBehaviour
         if(playerMovement.x != 0 || playerMovement.y != 0)
             playerDirection = playerMovement;
         playerMovement *= speed;
+        animator.SetFloat("X", playerDirection.x);
+        animator.SetFloat("Y", playerDirection.y);
     }
 
     private void interacting()
@@ -169,4 +125,9 @@ public class Player : MonoBehaviour
         selectedObject = obj;
     }
 
+    private void setFirstSprite()
+    {
+        SwapSprites swap = GetComponent<SwapSprites>();
+        selectedObjectSprite.sprite = swap.getFirstSprite();
+    }
 }
