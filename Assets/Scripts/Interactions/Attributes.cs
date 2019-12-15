@@ -6,26 +6,25 @@ using UnityEngine;
 public enum Animal
 {
     Chick,
-    Animal2,
-    Animal3
+    Hare,
+    Hedgehog
 };
 
 [System.Serializable]
 public enum Biome
 {
-    Hayfield,
-    Desert,
-    Island,
-    SnowyMountain
+    Grass,
+    Sand,
+    Autumn
 };
 
 [System.Serializable]
 public enum Food
 {
-    normal,
-    Red,
-    Blue,
-    Purple
+    Normal,
+    Grubs,
+    Worms,
+    Beetles
 };
 
 [System.Serializable]

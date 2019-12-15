@@ -157,5 +157,7 @@ public class Plantimal : MonoBehaviour, Interactable, Selectable
     private void changeDirection(Vector2 playerDirection)
     {
         currentDirection = playerDirection;
+        GetComponent<Animator>().SetFloat("X",currentDirection.x);
+        GetComponent<Animator>().SetFloat("Y", currentDirection.y);
     }
 }

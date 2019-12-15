@@ -34,7 +34,7 @@ public class PlantimalFactory : MonoBehaviour
     public GameObject instanciatePlantimal(Animal animal, Biome biome)
     {
         var newPlantimal = Instantiate(plantimal, Vector3.zero, Quaternion.identity);
-        var attributes = new Attributes(animal, biome, Food.normal);       
+        var attributes = new Attributes(animal, biome, Food.Normal);       
         plantimal.GetComponent<Plantimal>().instanciate(attributes);
         //newPlantimal.GetComponent<SwapSprites>().SpriteSheetName = getFirstPlantimal(animal);
         return plantimal;

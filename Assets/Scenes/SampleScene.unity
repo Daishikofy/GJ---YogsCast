@@ -172,7 +172,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0}
     oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -923,7 +923,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &882543926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -936,7 +936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc62eb4133026cc438cc9bc392239e4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpriteSheetName: 
+  SpriteSheetName: Hare
 --- !u!95 &882543927
 Animator:
   serializedVersion: 3
@@ -947,7 +947,7 @@ Animator:
   m_GameObject: {fileID: 882543925}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 709c8ac933eaf5e4b9211ca46985e999, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -995,7 +995,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 8260102145547333612, guid: aed9935b781c3b34bb6b6c86e7e928e0,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1003,7 +1004,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &882543929
@@ -1018,10 +1019,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aee0ff647d7103043b9ff9ea38482ad3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attribute: 000000000000000000000000
+  attribute:
+    animal: 0
+    biome: 0
+    food: 0
   name: 
+  timeBeforeHungry: 10
+  feedTimesToGrow: 3
   selectedSprite: {fileID: 0}
   groundFriendly: 1
+  isGrown: 0
 --- !u!4 &882543930
 Transform:
   m_ObjectHideFlags: 0
@@ -1224,7 +1231,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: -0.25}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0}
     oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -1329,10 +1336,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aee0ff647d7103043b9ff9ea38482ad3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attribute: 000000000000000000000000
+  attribute:
+    animal: 0
+    biome: 0
+    food: 0
   name: Albert
+  timeBeforeHungry: 10
+  feedTimesToGrow: 3
   selectedSprite: {fileID: 21300000, guid: cf84711e9d6ddb5468a50fda51c5c1c3, type: 3}
   groundFriendly: 1
+  isGrown: 0
 --- !u!212 &1131098196
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1521,15 +1534,16 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fb791234834647b4db5cf93f42ad14c4, type: 3}
+  m_Sprite: {fileID: 2968773329877069243, guid: 8eb6cdb87333e3049b83093437bf6354,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 0.5, y: 1.65625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
 --- !u!4 &1249725589
@@ -1563,9 +1577,9 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0.1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.5, y: 1.65625}
-    newSize: {x: 0.16, y: 0.16}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1.65625}
+    newSize: {x: 0.5, y: 1.65625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -1846,7 +1860,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1815018001
 MonoBehaviour:
   m_ObjectHideFlags: 0
