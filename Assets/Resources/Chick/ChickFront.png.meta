@@ -1,43 +1,79 @@
 fileFormatVersion: 2
-guid: 14a05c65b02284f408073eef09eb543e
+guid: aed9935b781c3b34bb6b6c86e7e928e0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3545706857920730390
-    second: Hare front idle_0
+      213: -7730307706063488894
+    second: Chick idle_0
   - first:
-      213: 4313506082732305988
-    second: Hare front idle_1
+      213: 5884682507505083011
+    second: Chick idle_1
   - first:
-      213: 7216405705175055600
-    second: Hare front idle_2
+      213: 4164385702172107426
+    second: Chick idle_2
   - first:
-      213: -1654782460231998418
-    second: Hare front idle_3
+      213: -5715643336630297746
+    second: Chick idle_3
   - first:
-      213: 3133347419978915223
-    second: Hare front idle_4
+      213: -365235412111619359
+    second: Chick idle_4
   - first:
-      213: -8339538200436178655
-    second: Hare front idle_5
+      213: 4939020577501130363
+    second: Chick idle_5
   - first:
-      213: -455079409416703015
-    second: Hare front idle_6
+      213: 3133184563080964186
+    second: Chick idle_6
   - first:
-      213: -3795313737652971245
-    second: Hare front idle_7
+      213: 3547687755659530668
+    second: Chick idle_7
   - first:
-      213: -3368152009410202702
-    second: Hare front idle_8
+      213: -7911238629976236093
+    second: Chick idle_8
   - first:
-      213: -2902438592902665654
-    second: Hare front idle_9
+      213: 1091589161178060242
+    second: Chick idle_9
   - first:
-      213: -387665445103121538
-    second: Hare front idle_10
+      213: -6061320734286165862
+    second: Chick idle_10
   - first:
-      213: -2101801141170102466
-    second: Hare front idle_11
+      213: -1108945289174187892
+    second: Chick idle_11
+  - first:
+      213: -141141701401783301
+    second: PlatimalFront_0
+  - first:
+      213: -6492109525296580254
+    second: PlatimalFront_1
+  - first:
+      213: 8260102145547333612
+    second: PlatimalFront_2
+  - first:
+      213: -1446044692395487089
+    second: PlatimalFront_3
+  - first:
+      213: 933563064577322833
+    second: PlatimalFront_4
+  - first:
+      213: 330983911837958613
+    second: PlatimalFront_5
+  - first:
+      213: -3024659207360305005
+    second: PlatimalFront_6
+  - first:
+      213: -1688763275271725167
+    second: PlatimalFront_7
+  - first:
+      213: -8349928018513500589
+    second: PlatimalFront_8
+  - first:
+      213: 6469131587686139258
+    second: PlatimalFront_9
+  - first:
+      213: -3611475863683399335
+    second: PlatimalFront_10
+  - first:
+      213: 8612193623859787428
+    second: PlatimalFront_11
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -122,253 +158,253 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hare front idle_0
+      name: PlatimalFront_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 217e33ef73ef9814f8862ef66cd5afca
-      internalID: -3545706857920730390
+      spriteID: e5cdb8beb44232a44ac69fb7256c42b2
+      internalID: -141141701401783301
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hare front idle_1
+      name: PlatimalFront_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 975fed1476910e64a9dae0b3472078fc
-      internalID: 4313506082732305988
+      spriteID: c91c1189d8aa258498c1b182d02a40d7
+      internalID: -6492109525296580254
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hare front idle_2
+      name: PlatimalFront_2
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be0c045f42dc90249b92129e7c23d009
-      internalID: 7216405705175055600
+      spriteID: d1b771332e9f13a488c1a6b657be97c9
+      internalID: 8260102145547333612
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hare front idle_3
+      name: PlatimalFront_3
       rect:
         serializedVersion: 2
         x: 96
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0fda5cdf5b0e7b42a6da3e6e925da79
-      internalID: -1654782460231998418
+      spriteID: db1014b9968e7674f87b42d67aa10ece
+      internalID: -1446044692395487089
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hare front idle_4
+      name: PlatimalFront_4
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 714cc16eb23bb264bba6dc0ab7c69ee7
-      internalID: 3133347419978915223
+      spriteID: e909bc7d1a68dfb418bb91b78dbf0a3d
+      internalID: 933563064577322833
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hare front idle_5
+      name: PlatimalFront_5
       rect:
         serializedVersion: 2
         x: 160
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8bac6c1801f99b4386fac43635534b7
-      internalID: -8339538200436178655
+      spriteID: 9c880e0aa32af2e4394dd35287fa8a05
+      internalID: 330983911837958613
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hare front idle_6
+      name: PlatimalFront_6
       rect:
         serializedVersion: 2
         x: 192
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb9dc81ff65f31a489136a8457aacbf3
-      internalID: -455079409416703015
+      spriteID: 5a7047db7c8af454482c5cac0250d6c0
+      internalID: -3024659207360305005
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hare front idle_7
+      name: PlatimalFront_7
       rect:
         serializedVersion: 2
         x: 224
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ef4e0602a9fbe84ea68e137ef5b5122
-      internalID: -3795313737652971245
+      spriteID: 5b4476f52df7dd34c9bb8166a2c90ec5
+      internalID: -1688763275271725167
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hare front idle_8
+      name: PlatimalFront_8
       rect:
         serializedVersion: 2
         x: 256
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e5d4e228e4ea674394dfd82025405f6
-      internalID: -3368152009410202702
+      spriteID: 2f838f5df539b9c4f9b06f1d31909e0a
+      internalID: -8349928018513500589
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hare front idle_9
+      name: PlatimalFront_9
       rect:
         serializedVersion: 2
         x: 288
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 493ede224bc14ac4caa79b8793a39bfa
-      internalID: -2902438592902665654
+      spriteID: 25fdf09756bc6ae468643ef2acc823cf
+      internalID: 6469131587686139258
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hare front idle_10
+      name: PlatimalFront_10
       rect:
         serializedVersion: 2
         x: 320
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 612b164617f7d1d479a152b06f16cea6
-      internalID: -387665445103121538
+      spriteID: a66d0c749061eac4e8b8dbe1e97b1042
+      internalID: -3611475863683399335
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hare front idle_11
+      name: PlatimalFront_11
       rect:
         serializedVersion: 2
         x: 352
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62074b6fece02f64481a42579e913822
-      internalID: -2101801141170102466
+      spriteID: 1ec4a5d409e62e840a41dc6c7db7071d
+      internalID: 8612193623859787428
       vertices: []
       indices: 
       edges: []

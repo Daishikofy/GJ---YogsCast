@@ -38,6 +38,114 @@ TextureImporter:
   - first:
       213: -7625888992153749360
     second: Chick side idle_11
+  - first:
+      213: 2002816617207860511
+    second: PlatimalSide_0
+  - first:
+      213: -2143864767915716818
+    second: PlatimalSide_1
+  - first:
+      213: -1553891087161879012
+    second: PlatimalSide_2
+  - first:
+      213: -6977861962264571346
+    second: PlatimalSide_3
+  - first:
+      213: -1707915170364711684
+    second: PlatimalSide_4
+  - first:
+      213: 6331740037701795447
+    second: PlatimalSide_5
+  - first:
+      213: 2927587049913771147
+    second: PlatimalSide_6
+  - first:
+      213: 4033397001898641823
+    second: PlatimalSide_7
+  - first:
+      213: 1181293066774518879
+    second: PlatimalSide_8
+  - first:
+      213: 2834602552916899054
+    second: PlatimalSide_9
+  - first:
+      213: 1758284962672971801
+    second: PlatimalSide_10
+  - first:
+      213: -5899652604301280012
+    second: PlatimalSide_11
+  - first:
+      213: 6852070741896531726
+    second: PlatimalLeft_0
+  - first:
+      213: -3363827928224261819
+    second: PlatimalLeft_1
+  - first:
+      213: 1566421264202443113
+    second: PlatimalLeft_2
+  - first:
+      213: -5755292487267808819
+    second: PlatimalLeft_3
+  - first:
+      213: 876807000829722358
+    second: PlatimalLeft_4
+  - first:
+      213: -4329306579069584813
+    second: PlatimalLeft_5
+  - first:
+      213: -1926490216474384735
+    second: PlatimalLeft_6
+  - first:
+      213: -7814528308516102448
+    second: PlatimalLeft_7
+  - first:
+      213: 5303766782110670825
+    second: PlatimalLeft_8
+  - first:
+      213: 317985639198592834
+    second: PlatimalLeft_9
+  - first:
+      213: 8838644671865033234
+    second: PlatimalLeft_10
+  - first:
+      213: -3042069923696138940
+    second: PlatimalLeft_11
+  - first:
+      213: 471747393800509470
+    second: ChicklLeft_0
+  - first:
+      213: -2918465702827918126
+    second: ChicklLeft_1
+  - first:
+      213: 5901392480788184360
+    second: ChicklLeft_2
+  - first:
+      213: -4873095201730404141
+    second: ChicklLeft_3
+  - first:
+      213: 7644666786817887063
+    second: ChicklLeft_4
+  - first:
+      213: 2416619108790986501
+    second: ChicklLeft_5
+  - first:
+      213: -5544508980005094398
+    second: ChicklLeft_6
+  - first:
+      213: 4646226884820030922
+    second: ChicklLeft_7
+  - first:
+      213: 3596099971523202010
+    second: ChicklLeft_8
+  - first:
+      213: 5151784345200613078
+    second: ChicklLeft_9
+  - first:
+      213: -8817253803521955565
+    second: ChicklLeft_10
+  - first:
+      213: -1344711903700202898
+    second: ChicklLeft_11
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -122,253 +230,253 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Chick side idle_0
+      name: PlatimalLeft_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64f6a6af157272744a9e1b3a534f4c7e
-      internalID: -2592833844280578368
+      spriteID: 018156861d3293342817e5f13250f029
+      internalID: 6852070741896531726
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chick side idle_1
+      name: PlatimalLeft_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69a53fcadca5e5c4b84d3159d4bc3933
-      internalID: 2206523155561169553
+      spriteID: b6114407ce1e63249b882ffa49522b5b
+      internalID: -3363827928224261819
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chick side idle_2
+      name: PlatimalLeft_2
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc7ed860c8c931444b12feaa7cbaec0d
-      internalID: -5094169001882160409
+      spriteID: 220b1b5614c27c14cb6f8f1773a39823
+      internalID: 1566421264202443113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chick side idle_3
+      name: PlatimalLeft_3
       rect:
         serializedVersion: 2
         x: 96
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a5ac8abae343414fb3154146b246942
-      internalID: 4567679663805924908
+      spriteID: e124855281996e8478fb276f059ae21a
+      internalID: -5755292487267808819
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chick side idle_4
+      name: PlatimalLeft_4
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb40be4cc81e87b4fbbdb201bf95cf26
-      internalID: -8349214363341284976
+      spriteID: 580729c84231d7247b65a46266acc185
+      internalID: 876807000829722358
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chick side idle_5
+      name: PlatimalLeft_5
       rect:
         serializedVersion: 2
         x: 160
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08b423ab1d140ac4ea38150bc741028a
-      internalID: -7221441873741083458
+      spriteID: 157f86d925b2e5d4b8c95a9307b30ce4
+      internalID: -4329306579069584813
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chick side idle_6
+      name: PlatimalLeft_6
       rect:
         serializedVersion: 2
         x: 192
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5e58c8151b20b749bd4405c91eecec5
-      internalID: -7728637575568287717
+      spriteID: b3fb3128a93b65841b7e2c9b180354d6
+      internalID: -1926490216474384735
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chick side idle_7
+      name: PlatimalLeft_7
       rect:
         serializedVersion: 2
         x: 224
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42684f2476cffe940969d5e360e7527c
-      internalID: -269616041947790318
+      spriteID: 6021b335f31dd75438e7a31bd58dea4c
+      internalID: -7814528308516102448
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chick side idle_8
+      name: PlatimalLeft_8
       rect:
         serializedVersion: 2
         x: 256
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5d9e80ea0eba414ba761db97e888950
-      internalID: 4559655824749950447
+      spriteID: b5368eb144795114580c0769847cdad2
+      internalID: 5303766782110670825
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chick side idle_9
+      name: PlatimalLeft_9
       rect:
         serializedVersion: 2
         x: 288
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 431a92cfa8f53a74e9f7b6450bae77a7
-      internalID: 4972775297546325787
+      spriteID: 0791baa29446754468a4d31126a9540a
+      internalID: 317985639198592834
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chick side idle_10
+      name: PlatimalLeft_10
       rect:
         serializedVersion: 2
         x: 320
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96877724b7d1ed44091dbac2e6fea589
-      internalID: 8216348709710226463
+      spriteID: 766162b34025c714dbc9e3529f05a49b
+      internalID: 8838644671865033234
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chick side idle_11
+      name: PlatimalLeft_11
       rect:
         serializedVersion: 2
         x: 352
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c898ecc1ab9ccf744aac2dcfdabaa09b
-      internalID: -7625888992153749360
+      spriteID: 788f07802d4f7304ca235a2a00f3c4fd
+      internalID: -3042069923696138940
       vertices: []
       indices: 
       edges: []

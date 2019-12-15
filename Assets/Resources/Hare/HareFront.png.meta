@@ -1,43 +1,79 @@
 fileFormatVersion: 2
-guid: e23a3418c67395642aab0d050a80fc12
+guid: 14a05c65b02284f408073eef09eb543e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5167114412427089384
-    second: Hedgehog side idle_0
+      213: -3545706857920730390
+    second: Hare front idle_0
   - first:
-      213: -6715558272782996846
-    second: Hedgehog side idle_1
+      213: 4313506082732305988
+    second: Hare front idle_1
   - first:
-      213: 9010320526654963523
-    second: Hedgehog side idle_2
+      213: 7216405705175055600
+    second: Hare front idle_2
   - first:
-      213: -9107002904213275159
-    second: Hedgehog side idle_3
+      213: -1654782460231998418
+    second: Hare front idle_3
   - first:
-      213: -4870032087712178855
-    second: Hedgehog side idle_4
+      213: 3133347419978915223
+    second: Hare front idle_4
   - first:
-      213: 6898813044268543249
-    second: Hedgehog side idle_5
+      213: -8339538200436178655
+    second: Hare front idle_5
   - first:
-      213: 2269933771604646152
-    second: Hedgehog side idle_6
+      213: -455079409416703015
+    second: Hare front idle_6
   - first:
-      213: 976994352007424729
-    second: Hedgehog side idle_7
+      213: -3795313737652971245
+    second: Hare front idle_7
   - first:
-      213: -6829003684017185755
-    second: Hedgehog side idle_8
+      213: -3368152009410202702
+    second: Hare front idle_8
   - first:
-      213: -7179496476003323845
-    second: Hedgehog side idle_9
+      213: -2902438592902665654
+    second: Hare front idle_9
   - first:
-      213: -244215101995328788
-    second: Hedgehog side idle_10
+      213: -387665445103121538
+    second: Hare front idle_10
   - first:
-      213: -4739787133104098674
-    second: Hedgehog side idle_11
+      213: -2101801141170102466
+    second: Hare front idle_11
+  - first:
+      213: -141141701401783301
+    second: PlatimalFront_0
+  - first:
+      213: -6492109525296580254
+    second: PlatimalFront_1
+  - first:
+      213: 8260102145547333612
+    second: PlatimalFront_2
+  - first:
+      213: -1446044692395487089
+    second: PlatimalFront_3
+  - first:
+      213: 933563064577322833
+    second: PlatimalFront_4
+  - first:
+      213: 330983911837958613
+    second: PlatimalFront_5
+  - first:
+      213: -3024659207360305005
+    second: PlatimalFront_6
+  - first:
+      213: -1688763275271725167
+    second: PlatimalFront_7
+  - first:
+      213: -8349928018513500589
+    second: PlatimalFront_8
+  - first:
+      213: 6469131587686139258
+    second: PlatimalFront_9
+  - first:
+      213: -3611475863683399335
+    second: PlatimalFront_10
+  - first:
+      213: 8612193623859787428
+    second: PlatimalFront_11
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -122,253 +158,253 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hedgehog side idle_0
+      name: PlatimalFront_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61895985f0b6f5543ae2d6bf9f3d6178
-      internalID: 5167114412427089384
+      spriteID: 549171368c12c054bbbaad821749e1cf
+      internalID: -141141701401783301
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hedgehog side idle_1
+      name: PlatimalFront_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a14f5b8264837d34c966d37243db63bb
-      internalID: -6715558272782996846
+      spriteID: 0e8feff613d2c994382cf57b43d60650
+      internalID: -6492109525296580254
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hedgehog side idle_2
+      name: PlatimalFront_2
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b68c9f8787dd3c42a673ed10416a207
-      internalID: 9010320526654963523
+      spriteID: e79fcbde002a6f344b4357e4a3513dcb
+      internalID: 8260102145547333612
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hedgehog side idle_3
+      name: PlatimalFront_3
       rect:
         serializedVersion: 2
         x: 96
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45170c0f9d6aa1c4b838110fac157840
-      internalID: -9107002904213275159
+      spriteID: 7ff8a30f1a712ca4898048db48cab693
+      internalID: -1446044692395487089
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hedgehog side idle_4
+      name: PlatimalFront_4
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac6cf219c4e7fad4e9ae8b6b4a02abae
-      internalID: -4870032087712178855
+      spriteID: d9313fdf375a3684d82a381b8b9bd40c
+      internalID: 933563064577322833
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hedgehog side idle_5
+      name: PlatimalFront_5
       rect:
         serializedVersion: 2
         x: 160
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82dbcc6d388d0f74e8ad25bf646ef8d3
-      internalID: 6898813044268543249
+      spriteID: c843c438510bc2a47ac0ecba8b26baba
+      internalID: 330983911837958613
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hedgehog side idle_6
+      name: PlatimalFront_6
       rect:
         serializedVersion: 2
         x: 192
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ac5e30e9c22a16439a76812dd2ac5b1
-      internalID: 2269933771604646152
+      spriteID: 5483f124eac8028479db4c9e2d73d129
+      internalID: -3024659207360305005
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hedgehog side idle_7
+      name: PlatimalFront_7
       rect:
         serializedVersion: 2
         x: 224
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9804cd5302ee1654385ebedca3546d39
-      internalID: 976994352007424729
+      spriteID: bbe88c2d46a35ac45b10d18e49d4bb8b
+      internalID: -1688763275271725167
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hedgehog side idle_8
+      name: PlatimalFront_8
       rect:
         serializedVersion: 2
         x: 256
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 972c7a2a2c7973747ac2329b6dcf9c6a
-      internalID: -6829003684017185755
+      spriteID: 7c8965759a6991643b04f34f89b3a398
+      internalID: -8349928018513500589
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hedgehog side idle_9
+      name: PlatimalFront_9
       rect:
         serializedVersion: 2
         x: 288
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae11410744a1cc14189ba05d375aae31
-      internalID: -7179496476003323845
+      spriteID: b86bd022497bea94f8bf1756b0cb93bc
+      internalID: 6469131587686139258
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hedgehog side idle_10
+      name: PlatimalFront_10
       rect:
         serializedVersion: 2
         x: 320
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd0ce9041b1e5a444959e61ddd1f9497
-      internalID: -244215101995328788
+      spriteID: 84f4a8de29a1ca042b8bf69784aecd96
+      internalID: -3611475863683399335
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hedgehog side idle_11
+      name: PlatimalFront_11
       rect:
         serializedVersion: 2
         x: 352
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afe902c7f8b04ce4ca36a8d6244dd333
-      internalID: -4739787133104098674
+      spriteID: 2cc606d86ae109147acdafbb1e9a5adc
+      internalID: 8612193623859787428
       vertices: []
       indices: 
       edges: []
