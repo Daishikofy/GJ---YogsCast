@@ -10,11 +10,17 @@ public class RequestDeliveryPoint : MonoBehaviour, Interactable
         var selectedObject = player.selectedObject;
         if (player.selectedObject != null && player.selectedObject.isType(type))
         {
-            Debug.Log("This is a plantimal, let it here");
-            bool res = RequestManager.Instance.validateRequest((Plantimal)selectedObject);
-            if (!res)
-                return;
-            player.setSelectedObject(null);
+            Plantimal plantimal = (Plantimal)selectedObject;
+            if (plantimal.isGrown)
+            {
+                Debug.Log("DeliveryPoint: This is a plantimal, let it here");
+                bool res = RequestManager.Instance.validateRequest((Plantimal)selectedObject);
+                if (!res)
+                    return;
+                player.setSelectedObject(null);
+            }
+            else
+                Debug.Log("DeliveryPoint: This plantimal is too small");
         }
         else
             Debug.Log("You give the plantimals here");

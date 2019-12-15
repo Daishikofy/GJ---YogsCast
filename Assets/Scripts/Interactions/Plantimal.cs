@@ -12,13 +12,19 @@ public class Plantimal : MonoBehaviour, Interactable, Selectable
     [SerializeField]
     float timeBeforeHungry = 10;
     [SerializeField]
+    int feedTimesToGrow = 3;
+    [SerializeField]
     Sprite selectedSprite;
     [SerializeField]
     bool groundFriendly = true;
 
+    int fedTimes;
+    bool isColored;
+    Food currentFood;
+
     bool isBeingHold = false;
     bool isFed = false;
-    bool isGrown = false;
+    public bool isGrown = false;
 
     Player player;
     Vector2 currentDirection;
@@ -36,13 +42,20 @@ public class Plantimal : MonoBehaviour, Interactable, Selectable
     public void OnInteraction(Player player)
     {
         Debug.Log("I am " + name);
+        Debug.Log("Attributes: " + attribute.ToString());
         var selectedObject = player.selectedObject;
         if (selectedObject != null)
         {
             if (selectedObject.isType(typeof(Insects).Name))
             {
+                if (isFed || isGrown)
+                {
+                    //Sound : Error
+                    return;
+                }
                 var insect = (Insects)selectedObject;
                 feed(insect.getFood());
+                selectedObject.deSelected();
             }
                 return;
         }
@@ -102,20 +115,43 @@ public class Plantimal : MonoBehaviour, Interactable, Selectable
 
     private void feed(Food food)
     {
-        attribute.food = food;
+        if (fedTimes > 0)
+        {
+            if (currentFood != food)
+                isColored = false;
+        }
+        currentFood = food;
+        fedTimes += 1;
+        StartCoroutine(foodCoolDown());
     }
-    private IEnumerator waterCoolDown()
+    private IEnumerator foodCoolDown()
     {
-        isFed = true;
-        Debug.Log("Pot: I have water!");
+        setFed(true);
         float cooldown = timeBeforeHungry;
         while (cooldown > 0f)
         {
             cooldown -= Time.deltaTime;
             yield return null;
         }
-        Debug.Log("Pot: I need water!");
-        isFed = false;
+        setFed (false);
+        if (fedTimes >= feedTimesToGrow)
+            grow();
+    }
+
+    private void setFed(bool value)
+    {
+        isFed = value;
+        if (isFed)
+            Debug.Log(name + " : I am not hungry anymore!");
+        else
+            Debug.Log(name + " : I am sooo hungry now!");
+        //TODO: Insert hungry sprite
+    }
+
+    private void grow()
+    {
+        isGrown = true;
+        Debug.Log(name + " : I am a grown up now!");
     }
 
     private void changeDirection(Vector2 playerDirection)
