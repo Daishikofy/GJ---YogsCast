@@ -5,6 +5,8 @@ public class Insects : Selectable
     public string name;
     public Sprite selectedSprite;
     [SerializeField]
+    Food food;
+    [SerializeField]
     bool groundFriendly = false;
 
     public Insects(string name, Sprite sprite)
@@ -41,5 +43,10 @@ public class Insects : Selectable
     public bool isType(string type)
     {
         return (this.GetType().Name == type);
+    }
+
+    public Food getFood()
+    {
+        return food;
     }
 }

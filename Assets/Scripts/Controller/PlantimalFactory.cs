@@ -21,19 +21,21 @@ public class PlantimalFactory : MonoBehaviour
     }
     public static PlantimalFactory Instance { get { return instance; } }
 
-    public string getFirstPlantimal(Attributes.Animal value)
+    public string getFirstPlantimal(Animal value)
     {
         return value.ToString();
     }
 
-    public string getSecondPlantimal(Attributes.Animal animal, Attributes.Biome biome,Attributes.Food food)
-    {
-        return animal.ToString()+biome.ToString()+food.ToString();
+    public string getSecondPlantimal(Attributes attributes)
+    { 
+        return attributes.ToString();
     }
 
-    public GameObject instanciatePlantimal(Attributes.Animal animal)
+    public GameObject instanciatePlantimal(Animal animal, Biome biome)
     {
         var newPlantimal = Instantiate(plantimal, Vector3.zero, Quaternion.identity);
+        var attributes = new Attributes(animal, biome, Food.normal);       
+        plantimal.GetComponent<Plantimal>().instanciate(attributes);
         //newPlantimal.GetComponent<SwapSprites>().SpriteSheetName = getFirstPlantimal(animal);
         return plantimal;
     }

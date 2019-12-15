@@ -9,7 +9,7 @@ public class Plant : MonoBehaviour
     [SerializeField]
     private Sprite readyForHarvest;
     [SerializeField]
-    private Attributes.Animal animal;
+    private Animal animal;
     
     public float getTime()
     {
@@ -20,7 +20,7 @@ public class Plant : MonoBehaviour
         GetComponent<SpriteRenderer>().sprite = readyForHarvest;
     }
 
-    public Attributes.Animal getAnimal()
+    public Animal getAnimal()
     {
         return animal;
     }
