@@ -124,5 +124,5 @@ MonoBehaviour:
   objectType: hegehogSeeds
   seedType: 0
   objectSprite: {fileID: 21300000, guid: bd3adc364f972214f8829f2a746d0b95, type: 3}
-  plantPrefab: {fileID: 1157059968366063693, guid: 409638982ed99d648a919925fccff764,
+  plantPrefab: {fileID: 7335947108968407802, guid: 70ca1d2926cccad4aa24b433a0c4f90d,
     type: 3}

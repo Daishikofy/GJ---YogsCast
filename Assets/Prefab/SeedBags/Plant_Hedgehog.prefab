@@ -71,8 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -3024659207360305005, guid: 35372522824f8c14cae90ed6c9f4c897,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: f9d3799b9ff4b01479141eaccee91692, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -95,6 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94d10f37a6fa1ef42a043d5b18960bbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBeforeHarvest: 30
-  readyForHarvest: {fileID: 21300000, guid: cf84711e9d6ddb5468a50fda51c5c1c3, type: 3}
+  timeBeforeHarvest: 3
+  readyForHarvest: {fileID: -1688763275271725167, guid: 35372522824f8c14cae90ed6c9f4c897,
+    type: 3}
   animal: 2

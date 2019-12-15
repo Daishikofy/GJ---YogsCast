@@ -54,6 +54,13 @@ public class SwapSprites : MonoBehaviour
 
     public Sprite getFirstSprite()
     {
-        return spriteSheet["PlatimalFront_0"];
+        Debug.LogWarning("Hello!");
+        if (spriteSheet == null)
+        {
+            Debug.LogWarning("No sprite sheet instanciated");
+            LoadSpriteSheet();
+            //return null;
+        }
+        return this.spriteSheet["PlatimalFront_0"];
     }
 }

@@ -8,7 +8,7 @@ public class Plantimal : MonoBehaviour, Interactable, Selectable
     [SerializeField]
     Attributes attribute;
     [SerializeField]
-    string name;
+    string myName;
     [SerializeField]
     float timeBeforeHungry = 10;
     [SerializeField]
@@ -29,8 +29,10 @@ public class Plantimal : MonoBehaviour, Interactable, Selectable
     Player player;
     Vector2 currentDirection;
 
-    public void instanciate(Attributes attributes, Sprite sprite)
+    public void instanciate(Attributes attributes, Sprite sprite, string name)
     {
+        Debug.Log(name + " Is born");
+        this.myName = name;
         this.attribute = attributes;
         this.selectedSprite = sprite;
     }
@@ -42,8 +44,9 @@ public class Plantimal : MonoBehaviour, Interactable, Selectable
 
     public void OnInteraction(Player player)
     {
-        Debug.Log("I am " + name);
+        Debug.Log("I am " + myName);
         Debug.Log("Attributes: " + attribute.ToString());
+
         if (selectedSprite == null)
             setFirstSprite();
         var selectedObject = player.selectedObject;
@@ -72,27 +75,28 @@ public class Plantimal : MonoBehaviour, Interactable, Selectable
         GetComponent<SpriteRenderer>().enabled = false;
         GetComponent<Collider2D>().enabled = false;
         
-        Debug.Log(name + ": You are holding me!");
+        //Debug.Log(name + ": You are holding me!");
         isBeingHold = true;
     }
 
     public void deSelected()
     {
-        Debug.Log(name + ": You put me on the ground!");
-        //Set it's position to playerPosition
-        changeDirection(player.playerDirection);
         transform.position = player.transform.position + (Vector3)player.playerDirection;
-        //Enable the game object
+ 
         GetComponent<SpriteRenderer>().enabled = true;
         GetComponent<Collider2D>().enabled = true;
+        changeDirection(player.playerDirection);
         isBeingHold = false;
         player = null;
     }
 
     public string getName()
     {
-        return name;
-
+        return myName;
+    }
+    public void setName(string name)
+    {
+        this.myName = name;
     }
 
     public Sprite getSprite()
@@ -145,21 +149,22 @@ public class Plantimal : MonoBehaviour, Interactable, Selectable
     {
         isFed = value;
         if (isFed)
-            Debug.Log(name + " : I am not hungry anymore!");
+            Debug.Log(myName + " : I am not hungry anymore!");
         else
-            Debug.Log(name + " : I am sooo hungry now!");
+            Debug.Log(myName + " : I am sooo hungry now!");
         //TODO: Insert hungry sprite
     }
 
     private void grow()
     {
         isGrown = true;
-        Debug.Log(name + " : I am a grown up now!");
+        Debug.Log(myName + " : I am a grown up now!");
     }
 
     private void changeDirection(Vector2 playerDirection)
     {
         currentDirection = playerDirection;
+        
         GetComponent<Animator>().SetFloat("X",currentDirection.x);
         GetComponent<Animator>().SetFloat("Y", currentDirection.y);
     }

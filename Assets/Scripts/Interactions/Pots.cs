@@ -30,7 +30,7 @@ public class Pots : MonoBehaviour, Interactable
                 player.selectedObject.deSelected();
                 player.setSelectedObject(null);
                 Seed seed = (Seed)selectedObject;
-                plant = Instantiate(seed.getPlantPrefab(), this.transform.position + Vector3.up * 0.5f, Quaternion.identity, this.transform).GetComponent<Plant>();
+                plant = Instantiate(seed.getPlantPrefab(), this.transform.position, Quaternion.identity, this.transform).GetComponent<Plant>();
                 putPlantInPot();
                 Debug.Log("Pot: You just planted a " + selectedObject.getName());
             }
@@ -45,7 +45,6 @@ public class Pots : MonoBehaviour, Interactable
         {
             Debug.Log("Pot: It is harvest time!");//Harvesting
             harvest(player);
-
             //If the plant is ready, harvest
         }
     }
@@ -72,8 +71,9 @@ public class Pots : MonoBehaviour, Interactable
 
     private void resetPot()
     {
+        isOccupied = false;
         setReadyForHarvest(false);
-        plant = null;
+        Destroy(plant.gameObject);
         setWater(false);
     }
 
@@ -94,11 +94,12 @@ public class Pots : MonoBehaviour, Interactable
 
     private void harvest(Player player)
     {
-        //Pass the animal and the biome and get a prefab back
         var plantanimal = PlantimalFactory.Instance.instanciatePlantimal(plant.getAnimal(), biome);
-        //Instanciate the prefab and desable it
-        plantanimal.GetComponent<Plantimal>().OnInteraction(player);
-        //Put the animal in the hands of the player
+        Plantimal plantimal = plantanimal.GetComponent<Plantimal>();
+        Debug.Log("NAME2: " + plantimal.getName());
+        plantimal.OnInteraction(player);
+        Debug.Log("NAME3: " + plantimal.getName());
+
         resetPot();
     }
 

@@ -124,10 +124,4 @@ public class Player : MonoBehaviour
 
         selectedObject = obj;
     }
-
-    private void setFirstSprite()
-    {
-        SwapSprites swap = GetComponent<SwapSprites>();
-        selectedObjectSprite.sprite = swap.getFirstSprite();
-    }
 }

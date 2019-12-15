@@ -7,6 +7,8 @@ public class PlantimalFactory : MonoBehaviour
     private static PlantimalFactory instance;
     [SerializeField]
     GameObject plantimal;
+    [SerializeField]
+    string[] names;
 
     private void Awake()
     {
@@ -33,13 +35,19 @@ public class PlantimalFactory : MonoBehaviour
 
     public GameObject instanciatePlantimal(Animal animal, Biome biome)
     {
+        Debug.Log("INSTANCIATE A PLANTIMAL");
+        
+
         var newPlantimal = Instantiate(plantimal, Vector3.zero, Quaternion.identity);
+
+        string name = names[Random.Range(0, names.Length)];
         var attributes = new Attributes(animal, biome, Food.Normal);
         SwapSprites swapSprites = newPlantimal.GetComponent<SwapSprites>();
         swapSprites.SpriteSheetName = getFirstPlantimal(animal);
         var sprite = swapSprites.getFirstSprite();
-        plantimal.GetComponent<Plantimal>().instanciate(attributes, sprite);
-        
-        return plantimal;
+        newPlantimal.GetComponent<Plantimal>().instanciate(attributes, sprite, name);
+        swapSprites.SpriteSheetName = animal.ToString();
+
+        return newPlantimal;
     }
 }
