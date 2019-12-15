@@ -5,7 +5,7 @@ using UnityEngine;
 public class Pots : MonoBehaviour, Interactable
 {
     [SerializeField]
-    Attributes.Biome biome;
+    Biome biome;
     [SerializeField]
     float waterGrowthBoost = 1;
     [SerializeField]
@@ -95,7 +95,7 @@ public class Pots : MonoBehaviour, Interactable
     private void harvest(Player player)
     {
         //Pass the animal and the biome and get a prefab back
-        var plantanimal = PlantimalFactory.Instance.instanciatePlantimal(plant.getAnimal());
+        var plantanimal = PlantimalFactory.Instance.instanciatePlantimal(plant.getAnimal(), biome);
         //Instanciate the prefab and desable it
         plantanimal.GetComponent<Plantimal>().OnInteraction(player);
         //Put the animal in the hands of the player

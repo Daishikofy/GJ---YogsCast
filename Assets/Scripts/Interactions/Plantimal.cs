@@ -4,25 +4,31 @@ using UnityEngine;
 
 public class Plantimal : MonoBehaviour, Interactable, Selectable
 {
+    
     [SerializeField]
-    int[] attribute = new int[3];
+    Attributes attribute;
     [SerializeField]
     string name;
+    [SerializeField]
+    float timeBeforeHungry = 10;
     [SerializeField]
     Sprite selectedSprite;
     [SerializeField]
     bool groundFriendly = true;
 
     bool isBeingHold = false;
+    bool isFed = false;
+    bool isGrown = false;
 
     Player player;
+    Vector2 currentDirection;
 
-    public void instance(int[] attribute)
+    public void instanciate(Attributes attributes)
     {
-        this.attribute = attribute;
+        this.attribute = attributes;
     }
 
-    int[] getAttribute()
+    Attributes getAttribute()
     {
         return attribute;
     }
@@ -30,7 +36,16 @@ public class Plantimal : MonoBehaviour, Interactable, Selectable
     public void OnInteraction(Player player)
     {
         Debug.Log("I am " + name);
-        if (player.selectedObject != null) return;
+        var selectedObject = player.selectedObject;
+        if (selectedObject != null)
+        {
+            if (selectedObject.isType(typeof(Insects).Name))
+            {
+                var insect = (Insects)selectedObject;
+                feed(insect.getFood());
+            }
+                return;
+        }
         player.setSelectedObject(this);
         this.player = player;
         selected();
@@ -49,6 +64,7 @@ public class Plantimal : MonoBehaviour, Interactable, Selectable
     {
         Debug.Log(name + ": You put me on the ground!");
         //Set it's position to playerPosition
+        changeDirection(player.playerDirection);
         transform.position = player.transform.position + (Vector3)player.playerDirection;
         //Enable the game object
         GetComponent<SpriteRenderer>().enabled = true;
@@ -78,9 +94,32 @@ public class Plantimal : MonoBehaviour, Interactable, Selectable
         return (this.GetType().Name == type);
     }
 
-    public int[] sendPlantimal()
+    public Attributes sendPlantimal()
     {
         Destroy(this.gameObject, 0.1f);
         return attribute;
+    }
+
+    private void feed(Food food)
+    {
+        attribute.food = food;
+    }
+    private IEnumerator waterCoolDown()
+    {
+        isFed = true;
+        Debug.Log("Pot: I have water!");
+        float cooldown = timeBeforeHungry;
+        while (cooldown > 0f)
+        {
+            cooldown -= Time.deltaTime;
+            yield return null;
+        }
+        Debug.Log("Pot: I need water!");
+        isFed = false;
+    }
+
+    private void changeDirection(Vector2 playerDirection)
+    {
+        currentDirection = playerDirection;
     }
 }

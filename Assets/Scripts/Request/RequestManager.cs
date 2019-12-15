@@ -55,7 +55,7 @@ public class RequestManager : MonoBehaviour
         requestsNumber -= 1;
 
         int[] requestAttributes = lastRequest.getAttributes();
-        int[] plantimalAttributes = plantimal.sendPlantimal();
+        int[] plantimalAttributes = plantimal.sendPlantimal().ToInt();
 
         int success = lastRequest.getHapiness();
         float loss = success / requestAttributes.Length; 

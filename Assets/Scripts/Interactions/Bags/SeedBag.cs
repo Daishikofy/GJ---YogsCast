@@ -5,7 +5,7 @@ public class SeedBag : MonoBehaviour, Interactable
     [SerializeField]
     private string objectType;
     [SerializeField]
-    private Attributes.Animal seedType;
+    private Animal seedType;
     [SerializeField]
     private Sprite objectSprite;
     [SerializeField]
