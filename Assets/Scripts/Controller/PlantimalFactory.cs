@@ -6,15 +6,8 @@ public class PlantimalFactory : MonoBehaviour
 {
     private static PlantimalFactory instance;
     [SerializeField]
-    GameObject[] firstPlatimals;
-    [SerializeField]
-    GameObject[][] finalPlatimals1;
-    [SerializeField]
-    GameObject[][] finalPlatimals2;
-    [SerializeField]
-    GameObject[][] finalPlatimals3;
+    GameObject plantimal;
 
-    GameObject[][][] platimals;
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -26,23 +19,22 @@ public class PlantimalFactory : MonoBehaviour
             instance = this;
         }
     }
-
-    private void Start()
-    {
-        platimals = new GameObject[3][][];
-        platimals[0] = finalPlatimals1;
-        platimals[1] = finalPlatimals2;
-        platimals[2] = finalPlatimals3;
-    }
     public static PlantimalFactory Instance { get { return instance; } }
 
-    public GameObject getFirstPlantimal(Attributes.Animal value)
+    public string getFirstPlantimal(Attributes.Animal value)
     {
-        return firstPlatimals[(int)value];
+        return value.ToString();
     }
 
-    public GameObject getSecondPlantimal(int[] value)
+    public string getSecondPlantimal(Attributes.Animal animal, Attributes.Biome biome,Attributes.Food food)
     {
-        return platimals[value[0]][value[1]][value[2]];
+        return animal.ToString()+biome.ToString()+food.ToString();
+    }
+
+    public GameObject instanciatePlantimal(Attributes.Animal animal)
+    {
+        var newPlantimal = Instantiate(plantimal, Vector3.zero, Quaternion.identity);
+        //newPlantimal.GetComponent<SwapSprites>().SpriteSheetName = getFirstPlantimal(animal);
+        return plantimal;
     }
 }

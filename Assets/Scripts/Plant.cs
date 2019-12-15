@@ -19,4 +19,9 @@ public class Plant : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().sprite = readyForHarvest;
     }
+
+    public Attributes.Animal getAnimal()
+    {
+        return animal;
+    }
 }
