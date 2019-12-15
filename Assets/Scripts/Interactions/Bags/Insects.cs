@@ -23,7 +23,7 @@ public class Insects : Selectable
         Debug.Log("You put the " + name + " seed back in the bag.");
     }
 
-    public string getType()
+    public string getName()
     {
         return name;
     }

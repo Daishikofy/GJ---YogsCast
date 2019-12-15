@@ -5,6 +5,8 @@ public class SeedBag : MonoBehaviour, Interactable
     [SerializeField]
     private string objectType;
     [SerializeField]
+    private Attributes.Animal seedType;
+    [SerializeField]
     private Sprite objectSprite;
 
     public string getType()
@@ -17,11 +19,11 @@ public class SeedBag : MonoBehaviour, Interactable
         Debug.Log("Bag : This is a bag of " + objectType + " .");
         if (player.selectedObject == null)
         {
-            var seed = new Seed(objectType, objectSprite);
+            var seed = new Seed(seedType, objectType, objectSprite);
             seed.selected();
             player.setSelectedObject(seed);
         }
-        else if (player.selectedObject.getType() == this.objectType)
+        else if (player.selectedObject.getName() == this.objectType)
         {
             player.selectedObject.deSelected();
             player.setSelectedObject(null);

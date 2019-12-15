@@ -21,7 +21,7 @@ public class InsectsBag : MonoBehaviour, Interactable
             seed.selected();
             player.setSelectedObject(seed);
         }
-        else if (player.selectedObject.getType() == this.objectType)
+        else if (player.selectedObject.getName() == this.objectType)
         {
             player.selectedObject.deSelected();
             player.setSelectedObject(null);
