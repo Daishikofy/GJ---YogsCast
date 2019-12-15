@@ -5,6 +5,12 @@ TextureImporter:
   - first:
       213: 1211949858914890079
     second: Wooden wall tileset upper_0
+  - first:
+      213: 5758055568232005068
+    second: Wooden wall tileset upper_1
+  - first:
+      213: -2361124410562478567
+    second: Wooden wall tileset upper_2
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -97,14 +103,56 @@ TextureImporter:
         width: 96
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8ab2f91c1d91664d8d3a4de0d206673
+      spriteID: b42c1a73a9489084195d87def9947876
       internalID: 1211949858914890079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden wall tileset upper_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d0b99f7affa04b419bcafb98277c565
+      internalID: 5758055568232005068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden wall tileset upper_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a687c87571fdf046abf58a70621abc2
+      internalID: -2361124410562478567
       vertices: []
       indices: 
       edges: []
